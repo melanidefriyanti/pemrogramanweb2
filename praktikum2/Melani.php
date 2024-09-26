@@ -1,0 +1,57 @@
+<?php
+
+class Melani{
+    //property
+    private string $nama;
+    private string $tgllahir;
+    protected string $alamat;
+
+    // constructornya
+    public function __construct($nama)
+    {
+        $this->nama = $nama;
+        echo "object ". $this->nama ." dibuat <br>";
+        $this->tampilkanPassword();
+    }
+
+    // destructor
+    public function __destruct()
+    {
+        echo "object ". $this->nama ." dihapus <br>";
+    }
+
+    //method
+    public function ucapkanSalam(){
+        echo "<h2> Halo perkenalkan nama saya ". $this->nama ." </h2>";
+    }
+
+    private function tampilkanPassword(){
+        echo "Rahasia1234";
+    }
+
+    
+    // setter
+    public function setNama($nama){
+        $this->nama = $nama;
+    }
+
+    // getter
+    public function getNama(){
+        return $this->nama;
+    }
+    public function setTglLahir($tgllahir){
+        $this->tgllahir =$tgllahir;
+    }
+
+    public function getTglLahir(){
+        return $this->tgllahir;
+    }
+
+    public function setAlamat($alamat){
+        $this->alamat = $alamat;
+    }
+
+    public function getAlamat(){
+        return $this->alamat;
+    }
+}
